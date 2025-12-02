@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@font-face {
+  font-family: EccentricStd;
+  font-family: Minimo;
+  font-family: Raleway-Medium;
+  font-family: MoongladeDemoBold-jOzM;
+  font-family: FuturaMediumBT;
+
+  /* src: url(../../assets/fonts/EccentricStd.otf);
+  src: url(../../assets/fonts/Minimo.otf);
+  src: url(../../assets/fonts/MoongladeDemoBold-jOzM.ttf);
+  src: url(../../assets/fonts/Raleway-Medium.ttf);
+  src: url(../../assets/fonts/FuturaMediumBT.ttf); */
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logo_imgs{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  transition: 0.5s ease;
+  /* border: 1px solid white; */
+  box-shadow: 5px 5px 10px white;
+}
+.logo_imgs:hover{
+  transform: scale(0.9);
+}
+
+
+.navbarMain {
+  width: 100%;
+  height: 100px;
+  padding-left: 8%;
+  padding-right: 8%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 5px;
+  gap: 10%;
+  z-index: 999;
+  font-family: "Poppins";
+  transition: transform 0.2s ease-out !important;
+  /* border: 1px solid yellowgreen; */
+}
+
+.visible {
+  transform: translateY(0);
+}
+
+.hidden {
+  transform: translateY(-115%);
+}
+
+.navbarMain .navbar {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbarMain .navbar .nav_links_a {
+  color: rgb(250, 244, 244);
+  text-decoration: none;
+  transition: 0.4s ease-in-out;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.navbarMain .navbar .nav-links_li {
+  position: relative;
+  font-size: 20px;
+  padding: 0 10px;
+  font-weight: 600;
+}
+
+.navbarMain .navbar .nav_links_a :hover,
+.navbarMain .navbar .nav-links_li .nav_links_a.active {
+  color: rgb(250, 246, 246)
+}
+
+.navbarMain .navbar .nav_links_a :hover,
+.navbarMain .navbar .nav-links_li .nav_links_a.active::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background: rgb(235, 51, 206);
+  background: linear-gradient(63deg,
+      rgba(235, 51, 206, 1) 43%,
+      rgba(166, 0, 255, 1) 100%,
+      rgba(192, 107, 237, 1) 100%);
+  position: absolute;
+  bottom: -4px;
+  left: 10px;
+}
+
+.navbarMain .navbar .navbarDropdown_main:hover::after,
+.navbarMain .navbar .navbarDropdown_main:hover::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background: rgb(235, 51, 206);
+  background: linear-gradient(63deg,
+      rgba(235, 51, 206, 1) 43%,
+      rgba(166, 0, 255, 1) 100%,
+      rgba(192, 107, 237, 1) 100%);
+  position: absolute;
+  bottom: -4px;
+  left: 10px;
+}
+
+.navbarMain .navbar .nav_links_a:hover::after,
+.navbarMain .navbar .nav_links_a:hover::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  background: rgb(235, 51, 206);
+  background: linear-gradient(63deg,
+      rgba(235, 51, 206, 1) 43%,
+      rgba(166, 0, 255, 1) 100%,
+      rgba(192, 107, 237, 1) 100%);
+  position: absolute;
+  bottom: -4px;
+  left: 10px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.dropdown-menu {
+  background-color: transparent !important;
+  padding: 10px;
+  display: none;
+
+}
+
+.dropdown-menu .show {
+  
+  background-color: transparent;
+  border: 1px solid rgb(248, 8, 8);
+  display: flex;
+  padding: 5px 10px;
+  position: absolute;
+  right: 12%;
+  z-index: 10;
+  top: 76%;
+  width: 50%;
+
+}
+
+.dropdown-item.active,
+.menu:hover .dropdown-menu {
+  background-color: transparent !important;
+}
+
+#navbarDropdown {
+  color: rgb(252, 252, 252);
+  /* text-decoration: underline; */
+  text-decoration: none;
+}
+
+.dropdown-menu>a {
+  background-color: transparent;
+  color: rgb(7, 7, 7);
+}
+
+.dropdown-menu>a .active {
+  background-color: rgba(90, 86, 86, 0) !important;
+  color: rgb(223, 95, 95);
+}
+
+.dropdown-menu>a:hover {
+  background-color: rgb(129, 43, 43) !important;
+  color: rgb(247, 242, 242);
+}
+
+.dropdown-menu>a:hover {
+  background: black;
+}
+
+.dropdown-item:active {
+  background-color: rgb(7, 7, 7) !important;
+}
+/* Show the dropdown menu on hover */
+.nav-links_li:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out; /* Slower transition for opacity */
+}
+
+/* Hide the dropdown menu and reset opacity on default state */
+.nav-links_li .dropdown-menu {
+  display: none;
+  opacity: 0; /* Set initial opacity to 0 */
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out; /* Slower transition for opacity */
+}
+
+/* Highlight active navbar link */
+.nav-links_li.active .nav_links_a {
+  
+  color: rgb(255, 0, 157); /* Change the color to your desired highlight color */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.menu:hover .navbarDropdown_main {
+  
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out; /* Apply slower transition effect to background-color */
+}
+.business_box {
+  background-color: rgba(15, 15, 15, 0.767);
+  padding: 5px 50px;
+  position: fixed;
+  top: -100px; /* Initial position above the viewport */
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 200px;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s ease-in-out, height 4s ease-in-out; /* Slower transition durations for color and height */
+}
+
+.business_box:hover {
+  background-color: rgba(15, 15, 15, 0.79); /* Change the background color on hover */
+  height: 280px; /* Increase the height on hover */
+  transition: top 1s ease-in-out, height 2s ease-in-out; /* Slower transition duration for slide-down */
+  top: 0; /* Slide down to its normal position */
+}
+
+.business_box_left,
+.business_box_right {
+  /* Add your styling for these sections */
+}
+
+/* Show the content when .business_box is active */
+.activate .business_box {
+  display: flex;
+}
+
+.business-item:hover .business_box {
+  display: flex;
+}
+
+
+.business_box .hidden-md-down {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px !important;
+  list-style-type: none;
+}
+
+
+
+.business_box .hidden-md-down .active {
+  color: #737374 !important;
+  margin-top: 10px !important;
+  border-color: rgba(235, 51, 206, 1);
+line-height: 2rem;
+  border-width: 3px;
+}
+
+
+
+.business_box_left {
+  border-right: 1px solid gray;
+  padding: 5px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 44%;
+}
+
+
+.business_box a {
+  margin-left: -20%;
+  width: max-content;
+  text-decoration: none;
+}
+
+.business_box.hidden-md-down .active {
+  color: transparent !important;
+  margin-top: 5px !important;
+}
+
+.business_box_right {
+  padding: 10px;
+  line-height: 30px;
+  padding-left: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.business_box a {
+  color: white !important;
+  font-weight: 400 !important;
+  border-bottom: 1px solid white;
+  font-size: 18px !important;
+}
+
+
+
+.business-section-3 {
+  display: flex;
+  gap: inherit;
+}
+
+
+.menu-item:hover .business_box {
+  display: flex;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .navbarMain {
+    background-color: black;
+    padding: 20px !important;
+  }
+
+  .navbarMain .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    color: black;
+    /* border: 2px solid white; */
+    padding-bottom: 50px;
+    top: 50px;
+    right: -100vw;
+    width: 100%;
+    gap: 20px;
+    background-color: black;
+    height: auto;
+    /* box-shadow: 0 40px 60px black; */
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+  .activate {
+    right: 0px !important;
+    z-index: 999;
+    background-color: black;
+  }
+
+  .logo .logo_img {
+    width: 90%;
+    height: 45px;
+    margin-top: 5px;
+    /* border: 1px solid red; */
+  }
+
+
+
+  .navbarMain .navbar .nav-links_li {
+    padding: 10px;
+    margin-bottom: 0px;
+    color: rgb(250, 248, 248);
+  }
+
+
+
+  .business_box {
+    background-color: #000000f0;
+    border: 1px solid gray;
+    padding: 5px 50px;
+    position: absolute;
+    right: -35%;
+    z-index: 999;
+    top: 76%;
+    /* display: none; */
+    /* width: 18%; */
+    display: flex;
+  }
+
+
+
+  .mobile-menu {
+    display: block;
+  }
+
+}
+@media screen and (min-width: 770px) and (max-width: 1024px) {
+  * Show the dropdown menu on hover */
+.nav-links_li:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out; /* Slower transition for opacity */
+}
+
+/* Hide the dropdown menu and reset opacity on default state */
+.nav-links_li .dropdown-menu {
+  display: none;
+  opacity: 0; /* Set initial opacity to 0 */
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out; /* Slower transition for opacity */
+}
+
+/* Highlight active navbar link */
+.nav-links_li.active .nav_links_a {
+  
+  color: rgb(255, 0, 157); /* Change the color to your desired highlight color */
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.menu:hover .navbarDropdown_main {
+  
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out; /* Apply slower transition effect to background-color */
+}
+.business_box {
+  background-color: rgba(15, 15, 15, 0.767);
+  padding: 5px 50px;
+  position: fixed;
+  top: -100px; /* Initial position above the viewport */
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 250px;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1s ease-in-out, height 4s ease-in-out; /* Slower transition durations for color and height */
+}
+
+.business_box:hover {
+  background-color: rgba(15, 15, 15, 0.9); /* Change the background color on hover */
+  height: 400px; /* Increase the height on hover */
+  transition: top 1s ease-in-out, background-color 2s ease-in-out, height 2s ease-in-out; /* Slower transition duration for slide-down */
+  top: 0; /* Slide down to its normal position */
+}
+
+
+.business_box_left {
+  border-right: 1px solid gray;
+  padding: 5px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+
+}
+
+.business_box_right {
+  padding: 10px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 34%;
+
+}
+
+
+}
+
+
+
+
+
+.logonames {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animates 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animates {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+
+  

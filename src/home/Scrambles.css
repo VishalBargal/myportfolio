@@ -1,0 +1,74 @@
+/* Scrambles.css */
+
+/* Container for the Scrambles component */
+.scrambles-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+  }
+  
+  /* Text element for scrambling */
+  .scrambles-text {
+    font-size: 3rem; /* Adjust font size as needed */
+    color: #333; /* Text color */
+    transition: all 0.5s ease; /* Smooth transition for scrambling effect */
+  }
+  
+  /* Message element */
+  .scrambles-message {
+    position: absolute;
+    bottom: 20px; /* Adjust position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #666; /* Message text color */
+  }
+  
+  /* Example animation styles */
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animation styles */
+  .scrambles-text.rotate {
+    animation: rotate 2s linear infinite; /* Example rotating animation */
+  }
+  
+  .scrambles-text.scale {
+    animation: scale 2s ease-in-out infinite alternate; /* Example scaling animation */
+  }
+  
+  .scrambles-text.fade {
+    animation: fade 2s ease-in-out infinite alternate; /* Example fading animation */
+  }
+  

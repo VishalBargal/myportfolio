@@ -1,0 +1,219 @@
+.contactmain{
+    height: 100vh;
+    width: 100%;
+    background-color: #212428;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.con-left-div{
+height: 600px;
+padding: 2%;
+box-shadow: 5px 5px  10px black;
+}
+.con-right-div{
+    height: 600px;
+    padding: 5%;
+    background-color: #212428;
+
+}
+.leftfirst{
+    height: 40%;
+    width:100%;
+    background-color: blue;
+    overflow: hidden;
+}
+.leftsecond{
+    height: 60%;
+    width:100%;
+    background-color: #212428;
+
+    
+}
+.conimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.conimg:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+/* down Arrow */
+.arrow_right_con1 {
+    position: absolute;
+    bottom: 11%;
+    left: 91%;
+    transform: translate(-50%, -50%);
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.arrow_right_con1 span {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(90deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.arrow_right_con1 span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow_right_con1 span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+
+.subscribr__btn99 {
+    /* --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb) !important; */
+    --border-color: linear-gradient(-45deg, #ff0000, #f5f2f6, #00fffb) !important;
+
+    --border-width: .125em;
+    --curve-size: .5em;
+    --blur: 30px;
+    --bg: #080312;
+    --color: #ffffff;
+    color: var(--color) !important;
+    /* use position: relative; so that BG is only for .subscribr__btn99 */
+    position: relative;
+    isolation: isolate;
+    display: inline-grid;
+    place-content: center;
+    padding: .5em 1.5em;
+    font-size: 17px;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+    clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+    transition: color 250ms;
+}
+
+.subscribr__btn99::after,
+.subscribr__btn99::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.subscribr__btn99::before {
+    background: var(--border-color);
+    background-size: 300% 300%;
+    animation: move-bg7234 5s ease infinite;
+    z-index: -2;
+}
+
+@keyframes move-bg7234 {
+    0% {
+        background-position: 31% 0%
+    }
+
+    50% {
+        background-position: 70% 100%
+    }
+
+    100% {
+        background-position: 31% 0%
+    }
+}
+
+.subscribr__btn99::after {
+    background: var(--bg);
+    z-index: -1;
+    clip-path: polygon(
+            /* Top-left */
+            var(--border-width) calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+    transition: clip-path 500ms;
+}
+
+.subscribr__btn99:where(:hover, :focus)::after {
+    clip-path: polygon(
+            /* Top-left */
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+
+            calc(100% - var(--border-width)) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) var(--border-width),
+
+            calc(100% - var(--border-width)) calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+
+            /* bottom-right 2 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)) calc(100% - var(--border-width)));
+    transition: 200ms;
+}
+
+.subscribr__btn99:where(:hover, :focus) {
+    color: #fff;
+}
+
+
+
+@media screen and (max-width:479px){
+  
+    .contactmain{
+        height: 170vh;
+        width: 100%;
+        background-color: #212428;
+    
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    }
